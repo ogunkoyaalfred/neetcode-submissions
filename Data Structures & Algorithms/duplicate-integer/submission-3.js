@@ -1,0 +1,29 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    // hasDuplicate(nums) {
+    //     let numsArr = [...nums]
+    //     for(let i = 0;i < numsArr.length; i++){
+    //         for( let j = i + 1; j < numsArr.length; j++){
+    //             if(nums[i] === nums[j]){
+    //                 return true
+    //             }
+    //         }
+    //     }
+    //     return false
+    // }
+
+    hasDuplicate(nums){
+        let seen = new Set()
+
+        for(let num of nums){
+            if(seen.has(num)){
+                return true
+            }
+            seen.add(num)
+        }
+        return false
+    }
+}
